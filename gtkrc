@@ -1,0 +1,32 @@
+style "back"
+{
+	engine "pixmap"
+	{
+		image
+		{
+			function = FLAT_BOX
+			shadow=NONE
+			state = NORMAL
+			file="moon_earth_1366x768.png"
+			stretch=TRUE
+			detail = "base"
+		}
+	}
+}
+
+style "time"
+{
+	fg[NORMAL]="#ffffff"
+	font_name="Sans 9"
+}
+
+style "prompt"
+{
+	fg[NORMAL]="#ffffff"
+	font_name="Sans Bold 10"
+}
+
+widget "lxdm" style "back"
+widget "lxdm.*.time" style "time"
+widget_class "GtkWindow.GtkVBox.GtkAlignment.GtkVBox.GtkAlignment.GtkHBox.<GtkLabel>" style "prompt"
+
